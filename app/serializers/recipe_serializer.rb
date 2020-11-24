@@ -1,4 +1,4 @@
-class MealSerializer < ActiveModel::Serializer
-  has_many :recipes
-  attributes :id, :name, :type, :url, :image_url, :cooking_time, :recipes
+class RecipeSerializer < ActiveModel::Serializer  
+    # has_many :meals
+    attributes :id, :name, :category, :url, :image_url, :cooking_time #, :meals
 end
