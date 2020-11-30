@@ -19,11 +19,12 @@ class Api::V1::MealsController < ApplicationController
 
   def update
     @meal = Meal.find(params[:id])
+    @meal.update(meal_params)
     # if @meal.update(meal_params)
-    #   render json: @meal, status: 200
+    # render json: @meal, status: 200
+    # @meal.save
+    # binding.pry
 
-
-#  @meal.update(meal_params)
     if @meal.save
       render json: @meal, status: :accepted
     else
@@ -34,7 +35,8 @@ class Api::V1::MealsController < ApplicationController
 
   private
     def meal_params
-      params.require(:meal).permit(:category, :name, :url, :image_url, :cooking_time, :recipes)
+      params.permit(:category, :name, :url, :image_url, :cooking_time, :recipes, :id)
+      # params.require(:meal).permit(:category, :name, :url, :image_url, :cooking_time, :recipes, :id)
     end
 
 
