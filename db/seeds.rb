@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Meal.create([
     { category: 'Breakfast', name: 'Eggs', url: 'www.rando-link.org', image_url: 'www.image-api.org', cooking_time: 15 },
+    
     { category: 'Lunch', name: 'Caesar-Salad', url: 'www.rando-link.org', image_url: 'www.image-api.org', cooking_time: 10 },
     { category: 'Lunch', name: 'Chicken-Salad', url: 'www.rando-link.org', image_url: 'www.image-api.org', cooking_time: 45 },
     { category: 'Dinner', name: 'Baked-Ziti', url: 'www.rando-link.org', image_url: 'www.image-api.org', cooking_time: 75 },
