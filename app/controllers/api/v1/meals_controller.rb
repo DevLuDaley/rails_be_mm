@@ -12,6 +12,8 @@ class Api::V1::MealsController < ApplicationController
 
   def destroy
     meal = Meal.find(params[:id])
+    # byebug
+    pry
     if meal.destroy
       render json: {mealId: meal.id}, status: 200
     end
@@ -19,6 +21,8 @@ class Api::V1::MealsController < ApplicationController
 
   def update
     @meal = Meal.find(params[:id])
+    # pry
+    # byebug
     # if @meal.update(meal_params)
     #   render json: @meal, status: 200
 
