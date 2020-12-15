@@ -11,22 +11,28 @@ class Api::V1::MealsController < ApplicationController
   end
 
   def destroy
-    meal = Meal.find(params[:id])
-    if meal.destroy
-      render json: {mealId: meal.id}, status: 200
+    @meal = Meal.find(params[:id])
+    # byebug
+    # pry
+    if @meal.destroy
+      # pry
+      render json: @meal.id, status: 200
     end
   end
 
   def update
     @meal = Meal.find(params[:id])
-    @meal.update(meal_params)
+    # pry
+    # byebug
     # if @meal.update(meal_params)
-    # render json: @meal, status: 200
-    # @meal.save
-    # binding.pry
+    #   render json: @meal, status: 200
 
+
+    @meal.update(meal_params)
     if @meal.save
+      # byebug
       render json: @meal, status: :accepted
+      # pry
     else
       render json: { errors: @meal.errors.full_messages }, status: :unprocessible_entity
     # end
@@ -35,8 +41,7 @@ class Api::V1::MealsController < ApplicationController
 
   private
     def meal_params
-      params.permit(:category, :name, :url, :image_url, :cooking_time, :recipes, :id)
-      # params.require(:meal).permit(:category, :name, :url, :image_url, :cooking_time, :recipes, :id)
+      params.require(:meal).permit(:category, :name, :url, :image_url, :cooking_time, :recipes)
     end
 
 
