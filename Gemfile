@@ -34,6 +34,7 @@ group :development, :test do
 end
 
 gem 'pry'
+gem 'faker'
 
 group :development do
   gem 'listen', '~> 3.2'
