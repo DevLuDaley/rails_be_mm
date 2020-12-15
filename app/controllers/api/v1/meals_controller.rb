@@ -11,11 +11,12 @@ class Api::V1::MealsController < ApplicationController
   end
 
   def destroy
-    meal = Meal.find(params[:id])
+    @meal = Meal.find(params[:id])
     # byebug
-    pry
-    if meal.destroy
-      render json: {mealId: meal.id}, status: 200
+    # pry
+    if @meal.destroy
+      # pry
+      render json: @meal.id, status: 200
     end
   end
 
@@ -27,9 +28,11 @@ class Api::V1::MealsController < ApplicationController
     #   render json: @meal, status: 200
 
 
-#  @meal.update(meal_params)
+    @meal.update(meal_params)
     if @meal.save
+      # byebug
       render json: @meal, status: :accepted
+      # pry
     else
       render json: { errors: @meal.errors.full_messages }, status: :unprocessible_entity
     # end
