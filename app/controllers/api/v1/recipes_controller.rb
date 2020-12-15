@@ -11,8 +11,8 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def destroy
-    recipe = Recipe.find(params[:id])
-    if recipe.destroy
+    @recipe = Recipe.find(params[:id])
+    if @recipe.destroy
       render json: {recipeId: recipe.id}, status: 200
     end
   end
