@@ -46,3 +46,30 @@ Recipe.create([
                ])
 
             #    Faker::Internet.url(host: 'example.com', path: '/foobar.html')
+
+# ! Meal Recipes 
+r1 = Meal.all[0]
+r2 = Meal.all[1]
+r3 = Meal.all[2]
+r4 = Meal.all[3]
+r5 = Meal.all[4]
+
+r1.recipes.create(category: 'Breakfast', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r1.recipes.create(category: 'Lunch', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r1.recipes.create(category: 'Dinner', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r2.recipes.create(category: 'Breakfast', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r2.recipes.create(category: 'Lunch', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r2.recipes.create(category: 'Dinner', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r2.recipes.create(category: 'Dinner', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r3.recipes.create(category: 'Breakfast', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r3.recipes.create(category: 'Lunch', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
+
+r3.recipes.create(category: 'Dinner', name: Faker::Food.dish, url: Faker::Internet.url(host: 'example.com', path: '/foobar.html'), image_url: Faker::LoremFlickr.image(size: "400x800", search_terms: ['cooking', 'meal'], match_all: true), cooking_time: Faker::Number.between(from: 15, to: 45))
